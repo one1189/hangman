@@ -81,13 +81,25 @@ def play_game():
     
     word_length = len(random_word)
 
-    hidden_word = "_ " * word_length
+    hidden_word = "-" * word_length
     wrong_letters = ""
 
-    # letter = input("Please enter a letter: ")
     
-    print(hidden_word)
-    print(random_word)
-    
+    while True:
+        print(hidden_word)
+        print(random_word)
+
+        letter = input("Please enter a letter: ")
+        if letter in random_word:
+            temp = ""
+            for index in range(len(random_word)):
+                if letter == random_word[index]:
+                    temp += letter
+                elif hidden_word[index] != "-":
+                    temp += hidden_word[index]
+                else:
+                    temp += "-"
+        hidden_word = temp
+
 
 play_game()
