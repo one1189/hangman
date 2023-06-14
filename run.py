@@ -14,6 +14,7 @@ def welcome_player():
     name = input("Please Enter your Name: ").capitalize()
     print(f"Welcome {name}.\n")
 
+
     while True:
         try:
             user_choice = int(input(
@@ -26,7 +27,28 @@ def welcome_player():
         except ValueError:
             print("Please select a number between 1 and 3.\n")
 
-    decision = input(f"{name}, you have selected {user_choice}. Do you wish to continue? Y/N ").upper()
+    selection = ""
+
+    if user_choice == 1:
+        selection = "Countries"
+    elif user_choice == 2:
+        selection = "Technology"
+    else:
+        selection = "Food and Drink"
+
+    while True:
+        try:
+            decision = str(input(
+                f"{name}, you have selected {selection}. Do you wish to continue? Y/N ")).upper()
+            if decision == "Y":
+                print("Let's Play. Good luck\n")
+                break
+            elif decision == "N":
+                return user_choice
+            else:
+                print("You must select either y or n")
+        except ValueError:
+            print("Invalid character. Please try again")
 
 
 welcome_player()
