@@ -5,15 +5,22 @@ from food_and_drink import fd_list
 from technology import tech_list
 from gallows import art
 
+name = None
 
 def welcome_player():
     """
-    Welcomes user and asks for a category to begin game
+    Welcomes the user
     """
+
+    global name
 
     print("Welcome to Hangman\n")
     name = input("Please Enter your Name: ").capitalize()
-    print(f"Welcome {name}.\n")
+    
+    print (f"Welcome {name}. You will only have six attempts to correctly guess the word.\n")
+
+
+def select_category()
 
     while True:
         try:
