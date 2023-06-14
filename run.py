@@ -81,12 +81,13 @@ def play_game():
     
     word_length = len(random_word)
 
-    blank_character = "_"
+    hidden_word = "_ " * word_length
     wrong_letters = ""
 
-    letter = input("Please enter a letter ")
+    # letter = input("Please enter a letter: ")
     
-    # print(random_word)
+    print(hidden_word)
+    print(random_word)
     
 
 play_game()
