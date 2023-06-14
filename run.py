@@ -3,6 +3,8 @@ import random
 import countries
 import food_and_drink
 import technology
+import gallows
+
 
 
 def welcome_player():
@@ -49,6 +51,11 @@ def welcome_player():
                 print("You must select either y or n")
         except ValueError:
             print("Invalid character. Please try again")
+
+def hangman_game():
+    """
+    Begins the game of hangman
+    """
 
 
 welcome_player()
