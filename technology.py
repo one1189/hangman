@@ -1,4 +1,4 @@
-word_list = ['Playstation',
+tech_list = ['Playstation',
              'Polaroid',
              'Samsung',
              'Microsoft',

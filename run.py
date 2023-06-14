@@ -1,10 +1,9 @@
 import random
 
-import countries
-import food_and_drink
-import technology
-import gallows
-
+from countries import country_list
+from food_and_drink import fd_list
+from technology import tech_list
+from gallows import art
 
 
 def welcome_player():
@@ -15,7 +14,6 @@ def welcome_player():
     print("Welcome to Hangman\n")
     name = input("Please Enter your Name: ").capitalize()
     print(f"Welcome {name}.\n")
-
 
     while True:
         try:
@@ -51,6 +49,7 @@ def welcome_player():
                 print("You must select either y or n")
         except ValueError:
             print("Invalid character. Please try again")
+
 
 def hangman_game():
     """
