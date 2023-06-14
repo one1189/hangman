@@ -31,7 +31,7 @@ def welcome_player():
         else:
             print("Invalid input. Please enter 'Y' or 'N'.\n")
     
-    print (f"Welcome {name}. You will only have six attempts to correctly guess the word. Good Luck!\n")
+    print(f"Welcome {name}. You will only have six attempts to correctly guess the word. Good Luck!\n")
 
     return category
 
@@ -69,7 +69,9 @@ def play_game():
     """
 
     random_word = ""
-
+    attempts = 6
+    
+    #Generates a random word based on the Category
     if chosen_category == "Countries":
         random_word = random.choice(country_list)
     elif chosen_category == "Technology":
@@ -77,7 +79,14 @@ def play_game():
     else:
         random_word = random.choice(fd_list)
     
-    print(random_word)
+    word_length = len(random_word)
+
+    blank_character = "_"
+    wrong_letters = ""
+
+    letter = input("Please enter a letter ")
+    
+    # print(random_word)
     
 
 play_game()
