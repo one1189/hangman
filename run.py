@@ -31,7 +31,9 @@ def welcome_player():
         else:
             print("Invalid input. Please enter 'Y' or 'N'.\n")
     
-    print (f"Welcome {name}. You will only have six attempts to correctly guess the word.\n")
+    print (f"Welcome {name}. You will only have six attempts to correctly guess the word. Good Luck!\n")
+
+    return category
 
 
 def select_category():
@@ -59,4 +61,23 @@ def select_category():
     return category
 
 
-welcome_player()
+chosen_category = welcome_player()
+
+def play_game():
+    """
+    Starts the game of Hangman
+    """
+
+    random_word = ""
+
+    if chosen_category == "Countries":
+        random_word = random.choice(country_list)
+    elif chosen_category == "Technology":
+        random_word = random.choice(tech_list)
+    else:
+        random_word = random.choice(fd_list)
+    
+    print(random_word)
+    
+
+play_game()
