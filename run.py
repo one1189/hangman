@@ -70,7 +70,7 @@ def play_game():
 
     random_word = ""
     attempts = 6
-    # print(title)
+    print(title)
     print(art[6])
     
     # Generates a random word based on the category selected
@@ -136,6 +136,8 @@ def play_game():
 
         if len(wrong_letters) == 6:
             print(art[0])
+            print("You're Dead")
+            exit()
 
 
 play_game()
