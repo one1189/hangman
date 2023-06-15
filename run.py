@@ -71,7 +71,7 @@ def play_game():
     random_word = ""
     attempts = 6
     
-    #Generates a random word based on the Category
+    # Generates a random word based on the category selected
     if chosen_category == "Countries":
         random_word = random.choice(country_list)
     elif chosen_category == "Technology":
@@ -83,9 +83,12 @@ def play_game():
 
     hidden_word = "-" * word_length
     wrong_letters = ""
+    guessed_letters = ""
  
     while True:
- 
+        
+        # Gallows and word to guess
+        print(art[6]) 
         print(hidden_word)
         # print(random_word)
 
@@ -100,6 +103,9 @@ def play_game():
                 else:
                     temp += "-"
             hidden_word = temp
+        
+        else:
+            wrong_letters += letter
 
         print(f"\nLetters Guessed: {letter.upper()}")
         print(f"\nIncorrect Letters: {wrong_letters}")
