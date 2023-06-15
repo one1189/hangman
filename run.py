@@ -112,12 +112,10 @@ def play_game():
 
         guessed_letters.append(letter)
 
-        print(f"\nLetters Guessed: {''.join(guessed_letters)}") #FIX THIS. CURRENTLY PRINTING LETTERS RATHER THAN LIST OF ONES GUESSED
+        print(f"\nLetters Guessed: {''.join(guessed_letters)}")
         print(f"\nIncorrect Letters: {wrong_letters}")
 
-        # Print out Hangman
-        # Empty gallows
-        # print(art[6]) 
+        # Gallows and number of attempts 
 
         if len(wrong_letters) == 1:
             print(art[5])
@@ -137,7 +135,25 @@ def play_game():
         if len(wrong_letters) == 6:
             print(art[0])
             print("You're Dead")
-            exit()
+            print(f"The word was {random_word}")
+            retry = input("\nTry Again? Y/N ").upper()
+            if retry == "Y":
+                select_category()
+                play_game()
+            else:
+                print("\nCome back when you're brave enough!!")
+                exit()
+
+        if "-" not in hidden_word:
+            print(random_word)
+            print(art[7])
+            play_again = input("\nCongratulations. You Survived. Play Again? Y/N ").upper()
+            if play_again == "Y":
+                select_category()
+                play_game()
+            else:
+                print("Thanks for playing.")
+                exit()
 
 
 play_game()
