@@ -83,8 +83,7 @@ def play_game():
 
     hidden_word = "-" * word_length
     wrong_letters = ""
-
-    
+ 
     while True:
         print(hidden_word)
         print(random_word)
