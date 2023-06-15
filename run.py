@@ -3,7 +3,7 @@ import random
 from countries import country_list
 from food_and_drink import fd_list
 from technology import tech_list
-from gallows import art
+from gallows import art, title
 
 
 
@@ -70,6 +70,7 @@ def play_game():
 
     random_word = ""
     attempts = 6
+    # print(title)
     print(art[6])
     
     # Generates a random word based on the category selected
