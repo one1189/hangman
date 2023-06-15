@@ -43,7 +43,7 @@ def select_category():
 
     while True:
         try:
-            selection = int(input("Please select a category:\n1. Countries\n2. Technology\n3. Food and Drink\n"))
+            selection = int(input("\nPlease select a category:\n1. Countries\n2. Technology\n3. Food and Drink\n\n"))
             if 1 <= selection <= 3:
                 break
             else:
