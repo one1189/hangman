@@ -107,7 +107,7 @@ def play_game():
         else:
             wrong_letters += letter
 
-        print(f"\nLetters Guessed: {letter.upper()}")
+        print(f"\nLetters Guessed: {letter.upper()}") #FIX THIS. CURRENTLY PRINTING LETTERS RATHER THAN LIST OF ONES GUESSED
         print(f"\nIncorrect Letters: {wrong_letters}")
 
 
