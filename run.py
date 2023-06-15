@@ -13,8 +13,6 @@ def welcome_player():
     checks whether they are happy with their decision
     """
 
-    global name
-
     print("Welcome to Hangman\n")
     name = input("Please Enter your Name: ").capitalize()
 
@@ -93,8 +91,7 @@ def play_game():
         print(chosen_category)
         print()
         print(hidden_word)
-        # print(random_word)
-
+        
         letter = input("\nPlease enter a letter: ").upper()
         if letter in random_word:
             temp = ""
@@ -138,7 +135,6 @@ def play_game():
             print(f"The word was {random_word}")
             retry = input("\nTry Again? Y/N ").upper()
             if retry == "Y":
-                select_category()
                 play_game()
             else:
                 print("\nCome back when you're brave enough!!")
@@ -149,7 +145,6 @@ def play_game():
             print(art[7])
             play_again = input("\nCongratulations. You Survived. Play Again? Y/N ").upper()
             if play_again == "Y":
-                select_category()
                 play_game()
             else:
                 print("Thanks for playing.")
