@@ -83,7 +83,7 @@ def play_game():
 
     hidden_word = "-" * word_length
     wrong_letters = ""
-    guessed_letters = ""
+    guessed_letters = []
  
     while True:
         
@@ -107,8 +107,29 @@ def play_game():
         else:
             wrong_letters += letter
 
-        print(f"\nLetters Guessed: {letter.upper()}") #FIX THIS. CURRENTLY PRINTING LETTERS RATHER THAN LIST OF ONES GUESSED
+        guessed_letters.append(letter)
+
+        print(f"\nLetters Guessed: {''.join(guessed_letters)}") #FIX THIS. CURRENTLY PRINTING LETTERS RATHER THAN LIST OF ONES GUESSED
         print(f"\nIncorrect Letters: {wrong_letters}")
+
+        # Print out Hangman
+        if len(wrong_letters) == 1:
+            print(art[5])
+        
+        if len(wrong_letters) == 2:
+            print(art[4])
+
+        if len(wrong_letters) == 3:
+            print(art[3])
+
+        if len(wrong_letters) == 4:
+            print(art[2])
+
+        if len(wrong_letters) == 5:
+            print(art[1])
+
+        if len(wrong_letters) == 6:
+            print(art[0])
 
 
 play_game()
