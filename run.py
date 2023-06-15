@@ -27,7 +27,7 @@ def welcome_player():
             print("Let's play. Good luck!\n")
             break
         elif decision == "N":
-            print("Please select another category.\n")
+            print("\nPlease select another category.")
         else:
             print("Invalid input. Please enter 'Y' or 'N'.\n")
     
@@ -85,10 +85,11 @@ def play_game():
     wrong_letters = ""
  
     while True:
+ 
         print(hidden_word)
-        print(random_word)
+        # print(random_word)
 
-        letter = input("Please enter a letter: ")
+        letter = input("Please enter a letter: ").upper()
         if letter in random_word:
             temp = ""
             for index in range(len(random_word)):
@@ -98,7 +99,10 @@ def play_game():
                     temp += hidden_word[index]
                 else:
                     temp += "-"
-        hidden_word = temp
+            hidden_word = temp
+
+        print(f"\nLetters Guessed: {letter.upper()}")
+        print(f"\nIncorrect Letters: {wrong_letters}")
 
 
 play_game()
