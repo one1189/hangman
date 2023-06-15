@@ -70,6 +70,7 @@ def play_game():
 
     random_word = ""
     attempts = 6
+    print(art[6])
     
     # Generates a random word based on the category selected
     if chosen_category == "Countries":
@@ -88,11 +89,12 @@ def play_game():
     while True:
         
         # Gallows and word to guess
-        print(art[6]) 
+        print(chosen_category)
+        print()
         print(hidden_word)
         # print(random_word)
 
-        letter = input("Please enter a letter: ").upper()
+        letter = input("\nPlease enter a letter: ").upper()
         if letter in random_word:
             temp = ""
             for index in range(len(random_word)):
@@ -113,6 +115,9 @@ def play_game():
         print(f"\nIncorrect Letters: {wrong_letters}")
 
         # Print out Hangman
+        # Empty gallows
+        # print(art[6]) 
+
         if len(wrong_letters) == 1:
             print(art[5])
         
