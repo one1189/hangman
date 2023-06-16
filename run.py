@@ -1,10 +1,21 @@
 import random
+import sys
+import os
 
 from countries import country_list
 from food_and_drink import fd_list
 from technology import tech_list
 from gallows import art, title
 
+def clear():
+    """
+    Clears the screen
+    """
+
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
 def welcome_player():
