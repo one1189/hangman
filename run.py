@@ -77,6 +77,10 @@ def play_game():
     Starts the game of Hangman
     """
 
+
+    # Clear screen for better user visibility
+    clear()
+
     random_word = ""
     attempts = 6
     print(title)
@@ -141,23 +145,31 @@ def play_game():
             print(art[1])
 
         if len(wrong_letters) == 6:
+
+            # Clear screen before asking about retry
+            clear()
             print(art[0])
             print("You're Dead")
             print(f"The word was {random_word}")
             retry = input("\nTry Again? Y/N ").upper()
             if retry == "Y":
+                clear()
                 play_game()
             else:
+                clear()
                 print("\nCome back when you're brave enough!!")
                 exit()
 
         if "-" not in hidden_word:
+            clear()
             print(random_word)
             print(art[7])
             play_again = input("\nCongratulations. You Survived. Play Again? Y/N ").upper()
             if play_again == "Y":
+                clear()
                 play_game()
             else:
+                clear()
                 print("Thanks for playing.")
                 exit()
 
