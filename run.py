@@ -36,7 +36,7 @@ def welcome_player():
             print("Let's play. Good luck!\n")
             break
         elif decision == "N":
-            print("\nPlease select another category.")
+            clear()
         else:
             print("Invalid input. Please enter 'Y' or 'N'.\n")
     
@@ -111,6 +111,10 @@ def play_game():
             for index in range(len(random_word)):
                 if letter == random_word[index]:
                     temp += letter
+                    clear()
+                    print(art[6])
+                    print(f"\nLetters Guessed: {''.join(guessed_letters)}")
+                    print(f"\nIncorrect Letters: {wrong_letters}")
                 elif hidden_word[index] != "-":
                     temp += hidden_word[index]
                 else:
