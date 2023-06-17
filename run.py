@@ -129,35 +129,30 @@ def play_game():
 
         if len(wrong_letters) == 1:
             clear()
-            print(title)
             print(f"\nLetters Guessed: {''.join(guessed_letters)}")
             print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[5])
         
         if len(wrong_letters) == 2:
             clear()
-            print(title)
             print(f"\nLetters Guessed: {''.join(guessed_letters)}")
             print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[4])
 
         if len(wrong_letters) == 3:
             clear()
-            print(title)
             print(f"\nLetters Guessed: {''.join(guessed_letters)}")
             print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[3])
 
         if len(wrong_letters) == 4:
             clear()
-            print(title)
             print(f"\nLetters Guessed: {''.join(guessed_letters)}")
             print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[2])
 
         if len(wrong_letters) == 5:
             clear()
-            print(title)
             print(f"\nLetters Guessed: {''.join(guessed_letters)}")
             print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[1])
