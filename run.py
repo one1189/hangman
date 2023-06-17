@@ -77,12 +77,10 @@ def play_game():
     Starts the game of Hangman
     """
 
-
     # Clear screen for better user visibility
     clear()
 
     random_word = ""
-    attempts = 6
     print(title)
     print(art[6])
     
@@ -124,24 +122,44 @@ def play_game():
 
         guessed_letters.append(letter)
 
-        print(f"\nLetters Guessed: {''.join(guessed_letters)}")
-        print(f"\nIncorrect Letters: {wrong_letters}")
+        # print(f"\nLetters Guessed: {''.join(guessed_letters)}")
+        # print(f"\nIncorrect Letters: {wrong_letters}")
 
         # Gallows and number of attempts 
 
         if len(wrong_letters) == 1:
+            clear()
+            print(title)
+            print(f"\nLetters Guessed: {''.join(guessed_letters)}")
+            print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[5])
         
         if len(wrong_letters) == 2:
+            clear()
+            print(title)
+            print(f"\nLetters Guessed: {''.join(guessed_letters)}")
+            print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[4])
 
         if len(wrong_letters) == 3:
+            clear()
+            print(title)
+            print(f"\nLetters Guessed: {''.join(guessed_letters)}")
+            print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[3])
 
         if len(wrong_letters) == 4:
+            clear()
+            print(title)
+            print(f"\nLetters Guessed: {''.join(guessed_letters)}")
+            print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[2])
 
         if len(wrong_letters) == 5:
+            clear()
+            print(title)
+            print(f"\nLetters Guessed: {''.join(guessed_letters)}")
+            print(f"\nIncorrect Letters: {wrong_letters}")
             print(art[1])
 
         if len(wrong_letters) == 6:
