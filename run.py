@@ -30,7 +30,7 @@ def welcome_player():
     while True:
         category = select_category()
 
-        decision = input(f"{name}, you have selected {category}. Are you happy with your choice? (Y/N) ").upper()
+        decision = input(f"{name}, you have six lives and have selected {category}. \nAre you happy with your choice? (Y/N) ").upper()
 
         if decision == "Y":
             print("Let's play. Good luck!\n")
@@ -40,8 +40,6 @@ def welcome_player():
         else:
             print("Invalid input. Please enter 'Y' or 'N'.\n")
     
-    print(f"Welcome {name}. You will only have six attempts to correctly guess the word. Good Luck!\n")
-
     return category
 
 
