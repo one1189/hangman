@@ -1,32 +1,19 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman
 
-Welcome,
+![Title graphic](/assets/title.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+The popular game of hangman, presented on a command line application format. The game is suitable to all persons, providing full user interaction to complete the game.
 
-## Reminders
+This game was created using the popular and powerful programming language called Python. It has been developed as project 3 of a 5 part series of repositories for Code Institute. Code institute offer a Diploma in Full Stack software development, that require the five projects to be submitted in order to succesfully pass the course.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+I hope that you enjoy the game.
 
-## Creating the Heroku app
+## Lucid Chart
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+![Flow Chart](/assets/flowchart.png)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+Prior to initial implementation of the game, I constructed a flow chart to help me understand how I would be able to write the python code for the game. At the beginning of the game, I wanted to ask the user their name, and use it later on. Also I wanted to ask the user whether they were sure about their category decision. If not, I wanted to loop back to the question.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+Finally, I needed to ensure that I could visually see how the code would work with regards to the guessing of letters. I was confused to begin with as I was asking myself whether the user found the correct letter in a word, which did not exist yet according to the flow chart. I rectified this to show that if the letter given was the correct word, and if not whether it was in the word before moving through the loop. 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+I found the use of a flow chart incredibly useful when developing the application. It’s incredibly handy to have a visual representation of what I want my code to do, before writing it out. Although it is an early draft, I think adding to the chart as I was writing my code would have benefitted me further, as it was sometimes difficult to keep up with what I was coding.
