@@ -80,6 +80,9 @@ def play_game():
 
     random_word = ""
     print(title)
+    print()
+    print("HINT: some words may contain spaces")
+    print()
     print(art[6])
     
     # Generates a random word based on the category selected
